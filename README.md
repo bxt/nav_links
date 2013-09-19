@@ -1,6 +1,7 @@
 # Behold, the NavLinks:
 
 [![Build Status](https://travis-ci.org/bxt/wptemplates.png?branch=master)](https://travis-ci.org/bxt/wptemplates)
+[![Gem Version](https://badge.fury.io/rb/nav_links.png)](http://badge.fury.io/rb/nav_links)
 
 Gem. Rails. Nav links. The nav_link_to helper works just like the standard Rails link_to helper, but adds a 'selected' class to your link (or its wrapper) if certain criteria are met. By default, if the link's destination url is the same url as the url of the current page, a default class of 'selected' is added to the link. Just replace `link_to` with `nav_link_to` in your templates. 
 
