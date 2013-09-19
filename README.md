@@ -1,6 +1,8 @@
 # Behold, the NavLinks:
 
-Gem. Rails. Nav links. he nav_link_to helper works just like the standard Rails link_to helper, but adds a 'selected' class to your link (or its wrapper) if certain criteria are met. By default, if the link's destination url is the same url as the url of the current page, a default class of 'selected' is added to the link. Just replace `link_to` with `nav_link_to` in your templates. 
+[![Build Status](https://travis-ci.org/bxt/wptemplates.png?branch=master)](https://travis-ci.org/bxt/wptemplates)
+
+Gem. Rails. Nav links. The nav_link_to helper works just like the standard Rails link_to helper, but adds a 'selected' class to your link (or its wrapper) if certain criteria are met. By default, if the link's destination url is the same url as the url of the current page, a default class of 'selected' is added to the link. Just replace `link_to` with `nav_link_to` in your templates. 
 
 ## Installation
 
@@ -48,7 +50,6 @@ You can reduce duplication and wrap `nav_link_to` calls with the same options wi
 
 Here's what you can do on a rainy day:
 
-  - Integrate Travis CI
   - Write integration tests
   - Extend docs
 
@@ -62,5 +63,5 @@ Here's what you can do on a rainy day:
 
 ## Credits
 
-This gem is mostly based on the gem [nav_lynx](https://github.com/vigetlabs/nav_lynx).
+This gem is mostly based on the gem [nav_lynx](https://github.com/vigetlabs/nav_lynx) and sponsored by [Sophisticates GmbH](http://sophisticates.de/)
 
