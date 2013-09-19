@@ -32,6 +32,26 @@ Same usage as `link_to`:
       <strong>My Page</strong>
     <% end %>
 
+### Group links with same options
+
+You can reduce duplication and wrap `nav_link_to` calls with the same options with a call to `nav_links` like this: 
+
+    <ul class="nav">
+      <% nav_links url_segment: 1, wrapper: 'li', selected_class:'active' do |n| %>
+        <%= n.nav_link_to "Projects", projects_path %>
+        <%= n.nav_link_to "People", people_path %>
+        <%= n.nav_link_to "About", about_path %>
+      <% end %>
+    </ul>
+
+## Rainy day?
+
+Here's what you can do on a rainy day:
+
+  - Integrate Travis CI
+  - Write integration tests
+  - Extend docs
+
 ## Contributing
 
 1. Fork it
