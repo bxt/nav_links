@@ -14,8 +14,17 @@ describe NavLinks::ViewHelpers do
       NavLinks::LinkGenerator.should_receive(:new).with(:request, "My Title", "/path", {}, {})
         .and_return(link_generator)
 
-      helper.nav_links do |n|
-        n.nav_link_to("My Title", "/path")
+      helper.nav_links do |nav|
+        nav.link_to("My Title", "/path")
+      end
+    end
+
+    it 'supports the deprecated method name with nav_ prefix' do
+      NavLinks::LinkGenerator.should_receive(:new).with(:request, "My Title", "/path", {}, {})
+        .and_return(link_generator)
+
+      helper.nav_links do |nav|
+        nav.nav_link_to("My Title", "/path")
       end
     end
 
@@ -23,8 +32,8 @@ describe NavLinks::ViewHelpers do
       NavLinks::LinkGenerator.should_receive(:new).with(:request, "My Title", "/path", {}, {foo: :bar})
         .and_return(link_generator)
 
-      helper.nav_links foo: :bar do |n|
-        n.nav_link_to("My Title", "/path")
+      helper.nav_links foo: :bar do |nav|
+        nav.link_to("My Title", "/path")
       end
     end
 
@@ -32,8 +41,8 @@ describe NavLinks::ViewHelpers do
       NavLinks::LinkGenerator.should_receive(:new).with(:request, "My Title", "/path", {}, {foo: :baz})
         .and_return(link_generator)
 
-      helper.nav_links foo: :bar do |n|
-        n.nav_link_to("My Title", "/path", {}, {foo: :baz})
+      helper.nav_links foo: :bar do |nav|
+        nav.link_to("My Title", "/path", {}, {foo: :baz})
       end
     end
 

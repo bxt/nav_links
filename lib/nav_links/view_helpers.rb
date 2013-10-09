@@ -21,12 +21,14 @@ module NavLinks
         @options = options
       end
 
-      def nav_link_to(*args, &block)
+      def link_to(*args, &block)
         index = block_given? ? 2 : 3
         args[index] = @options.merge(args[index] || {})
 
         @base.nav_link_to(*args, &block)
       end
+
+      alias_method :nav_link_to, :link_to # deprecated, remove in 2.x
 
     end
   end
